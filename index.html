@@ -52,17 +52,18 @@
 
     <nav>
         <ul>
-            <li>Hakkımda</li>
-            <li>Projelerim</li>
-            <li>İletişim</li>
+            <li class="btn-about">Hakkımda</li>
+            <li class="btn-project">Projelerim</li>
+            <li class="btn-contact">İletişim</li>
         </ul>
     </nav>
 
-    <section class="projects">
+    <section class="projects" style="display: none;">
         <ul class="project-cards">
             <li class="project-card-info">
 
-                <img src="" alt="" class="project-img">
+
+                <video src="./image/hotelrezervation.mp4" class="project-img" autoplay muted loop></video>
                 <h1 class="project-title">Otel Rezervasyon Sistemi</h1>
 
                 <p class="project-about">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi placeat
@@ -90,7 +91,7 @@
             </li>
             <li class="project-card-info">
 
-                <img src="" alt="" class="project-img">
+                <video src="./image/beykentOto.mp4" class="project-img" autoplay muted loop></video>
                 <h1 class="project-title">Beykent Oto</h1>
                 <p class="project-about">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi placeat
                     incidunt ut et tenetur, eaque aliquam aut necessitatibus similique distinctio omnis. Voluptates
@@ -98,7 +99,7 @@
             </li>
             <li class="project-card-info">
 
-                <img src="" alt="" class="project-img">
+                <img src="./image/euler_Hamilton.png" alt="" class="project-img">
                 <h1 class="project-title">Euler and Hamilton Graph Checker</h1>
                 <p class="project-about">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi placeat
                     incidunt ut et tenetur, eaque aliquam aut necessitatibus similique distinctio omnis. Voluptates
@@ -109,10 +110,35 @@
     </section>
 
 
-    <section class="about-us" style="display: none;">
-
+    <section class="about-us" style="display: block;">
+        <div class="about-container">
+            <h1>Hakkımda</h1>
+            <p>
+                Ben Hüseyin Sarıbuğa, üniversite eğitimime devam eden ve yazılım geliştirme, yapay zeka, gömülü sistemler gibi alanlara ilgi duyan bir araştırmacı ve geliştiriciyim. Akademik hayatım boyunca çeşitli projelerde yer alarak teknolojiye olan ilgimi somut çalışmalara dönüştürme fırsatı buldum.
+            </p>
+            <p>
+                Özellikle <strong>web geliştirme, veri analizi ve donanım tabanlı projeler</strong> üzerinde çalışmaktayım. TÜBİTAK 2209-A kapsamında yürüttüğüm proje ile <strong>bitki türüne, toprak nemine ve hava koşullarına göre en optimum sulama zaman çizelgesini üreten yapay zeka tabanlı bir sistem</strong> geliştirdim. Bunun yanı sıra, <strong>LabVIEW ve Arduino</strong> kullanarak <strong>MLX90614 kızılötesi sensör entegrasyonu</strong> üzerine çalışmalar gerçekleştirdim.
+            </p>
+            <p>
+                Teknolojiye olan ilgim doğrultusunda kendimi sürekli geliştirmekte, problem çözme yeteneğimi artıracak projeler üzerinde çalışmaktayım. Alanımla ilgili teorik bilgileri pratiğe dökerek, gerçek dünyadaki problemlere yenilikçi çözümler sunmayı amaçlamaktayım.  
+            </p>
+            <p>
+                Gelecekte edindiğim bilgi ve becerileri kullanarak sektörde değerli projelere katkı sağlamayı ve uzmanlık alanımı genişletmeyi hedefliyorum.
+            </p>
+    
+            <h1>Yeteneklerim</h1>
+            <ul class="mySkills">
+                <li class="mySkill-item">Problem çözme ve analitik düşünme</li>
+                <li class="mySkill-item">Takım çalışması ve proje yönetimi</li>
+                <li class="mySkill-item">Yeni teknolojilere hızlı adaptasyon</li>
+                <li class="mySkill-item">Web geliştirme ve kullanıcı arayüzü tasarımı</li>
+                <li class="mySkill-item">LabVIEW ile veri analizi ve donanım entegrasyonu</li>
+                <li class="mySkill-item">Arduino ile sensör ve gömülü sistem uygulamaları</li>
+            </ul>
+        </div>
     </section>
-     
+    
+
     <section class="contact-us" style="display: none;">
 
     </section>
@@ -128,7 +154,7 @@
         </div>
     </footer>
     <section class="maker-date">
-        <small> 2025 ©- Hüseyin Sarıbuğa saribugahuseyin770@gmail.com
+        <small> 2025 ©- Hüseyin Sarıbuğa saribugahuseyin770[@]gmail.com
         </small>
     </section>
 
