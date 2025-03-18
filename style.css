@@ -55,6 +55,7 @@ nav ul li:hover {
     
 }
 
+
 .hakkimda .right{
     width: 48%;
     height: auto;
@@ -73,6 +74,22 @@ nav ul li:hover {
     
 }
 
+.dot1 {
+    display: inline-block;
+    font-size: 18px; /* Noktanın boyutunu ayarla */
+    color: #09ff00; /* Renk */
+    animation: glow 0.5s infinite alternate;
+  }
+  
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 5px #09ff00, 0 0 10px #09ff00;
+    }
+    100% {
+      text-shadow: 0 0 10px #09ff00, 0 0 20px #09ff00, 0 0 30px #09ff00;
+    }
+  }
+  
 .hakkimda .left .profil:hover{
 
 }
@@ -227,8 +244,8 @@ section.active {
 
 .mySkills {
    
-    padding: 0 5PX;
-    margin-top: 20px;
+    padding: 0 5px;
+    
     text-align: left;
 }
 
@@ -237,9 +254,9 @@ section.active {
     color: rgb(0, 0, 0);
     padding: 5px;
     margin: 5px 0;
-    border-radius: 5px;
+    
     font-size: 16px;
-    font-weight: bold;
+  
     transition: 0.3s;
 }
 
@@ -266,7 +283,51 @@ section.active {
     top: -50%; 
     
   }
+
+.focus{
+    padding: 20px 0px;
+}
+
+  .focus-Areas{
+   
+    padding: 0 5px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.focus-item {
   
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+
+.prog-lang{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.programmin-lang{
+    padding: 0 5px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.p-item{
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
 
 
 /* İletişim Bölümü */
@@ -333,6 +394,20 @@ section.active {
 
 .contact-form button:hover {
     background-color: #2980b9;
+}
+
+
+.education , .experience{
+    display: flex;
+    
+}
+.education .left ,.experience .left{
+    width: 40%;
+
+}
+.education .right , .experience .right{
+  
+     width: 20%;
 }
 
 
