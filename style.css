@@ -429,34 +429,32 @@ footer .Social {
 
 footer .Social .icon {
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid #000; /* Düzgün bir kenarlık için 2px */
     width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 5px;
+    margin: 0 10px; /* İkonlar arasında daha fazla boşluk */
     transition: all 0.3s ease; 
+    color: rgb(133, 122, 122);
+    background-color: #000;
+    cursor: pointer;
 }
 
 footer .Social .icon:hover {
-    border: 1px solid black; 
-    background-color: black;  
+    background-color: rgb(133, 122, 122); /* Hoverda arka plan siyah */
+    color: #fff;
 }
 
-footer .Social .icon a {
-    color: #000;
-    text-decoration: none;
-    transition: color 0.3s ease; 
+
+
+
+
+footer .Social .icon  i {
+    font-size: 1.7rem; /* İkon boyutunu biraz küçültme */  
 }
 
-footer .Social .icon:hover a {
-    color: white; 
-}
-
-footer .Social .icon a i {
-    font-size: 2rem;
-}
 
 
 .maker-date{
