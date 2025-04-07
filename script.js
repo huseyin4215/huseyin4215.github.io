@@ -4,6 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const projectBtn = document.querySelector(".btn-project");
     const contactBtn = document.querySelector(".btn-contact");
 
+    const dropHomePageBtn=document.querySelector(".DropBtn-homePage");
+    const dropaboutBtn=document.querySelector(".DropBtn-about");
+    const dropprojectBtn=document.querySelector(".DropBtn-project");
+    const dropcontactBtn=document.querySelector(".DropBtn-contact");
+
+
+
+
     const aboutSection = document.querySelector(".about-us");
     const projectSection = document.querySelector(".projects");
     const contactSection = document.querySelector(".contact-us");
@@ -28,5 +36,11 @@ document.addEventListener("DOMContentLoaded", function () {
         aboutSection.style.display="none";
         projectSection.style.display="none";
         contactSection.style.display="block";
+    });
+
+
+    dropHomePageBtn.addEventListener("click", function () {
+        window.location.href = "index.html";
+        projectBtn.click();
     });
 });

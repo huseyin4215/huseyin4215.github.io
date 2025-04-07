@@ -77,14 +77,13 @@ nav ul li:hover {
 
 /* Hedefler Bölümü */
 .project-Feature {
-    display: flex;
-    flex-wrap: wrap;
+
     justify-content: space-between;
     margin-top: 30px;
 }
 
 .project-Feature .left {
-    width: 60%;
+    width: 100%;
 }
 
 .project-Feature .left h1 {
@@ -93,21 +92,30 @@ nav ul li:hover {
 }
 
 .project-Feature .left .features {
-    width: 50%;
+    width: 100%;
     padding-left: 20px;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     
 }
 
 .project-Feature .features-item {
+    width: 42%;
     font-size: 16px;
+    margin: 15px;
     margin-bottom: 10px;
     line-height: 1.6;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     padding: 10px;
+    border-radius: 15px;
+    transition: all 0.5s ;
 }
+.project-Feature .features-item:hover{
+    width: 45%;
+}
+
 .project-Feature .features-item h1 {
     font-size: 18px;
     font-weight: bold;
@@ -173,6 +181,7 @@ footer .Social .icon a i {
     width: 100%;
     background-color: black;
     padding: 20px 0;
+    text-align: center;
     color: #fff;
 }
 
