@@ -17,7 +17,12 @@
 
 
     <nav>
-        <ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
             <li class="DropBtn-homePage">Anasayfa</li>
             <li class="DropBtn-about">Hakkımda</li>
             <li class="DropBtn-project">Projelerim</li>
@@ -227,6 +232,12 @@
             } else {
                 navbar.classList.remove("scrolled");
             }
+        });
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
         });
 
     </script>

@@ -49,6 +49,68 @@ nav ul li:hover {
     color: #000000;
 }
 
+/* Hamburger Menü */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 1100;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Ana navbar */
+nav ul.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: flex;
+  }
+
+  nav.scrolled {
+    height: 40px;
+    background-color: #161616; /* Kaydırınca yarı saydam */
+}
+  nav ul.nav-list {
+      flex-direction: column;
+      background-color: #161616;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+  }
+
+  nav ul.nav-list.active {
+      max-height: 300px; /* Açılınca gösterilecek yükseklik */
+  }
+
+  nav ul.nav-list li {
+      text-align: center;
+      padding: 15px 0;
+      border-bottom: 1px solid #333;
+  }
+}
+
+
+
 /* İçerik Bölümü */
 .content {  
     width: 90%;
@@ -263,10 +325,7 @@ footer .Social .icon  i {
 
 /* Responsive Tasarım */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
+
 
     .project-Feature {
         flex-direction: column;
@@ -277,3 +336,5 @@ footer .Social .icon  i {
         width: 100%;
     }
 }
+
+

@@ -17,7 +17,12 @@
 
 
     <nav>
-        <ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
             <li class="DropBtn-homePage">Anasayfa</li>
             <li class="DropBtn-about">Hakkımda</li>
             <li class="DropBtn-project">Projelerim</li>
@@ -32,16 +37,19 @@
             <video
                 src="https://github.com/huseyin4215/huseyin4215.github.io/blob/e15eabcd777bde2637798ddde744f0450a1ccd48/image/EulerHamilton.mp4?raw=true"
                 type="video/mp4" class="project-video" autoplay muted loop>
-            </video> 
+            </video>
 
-           
+
         </div>
 
         <div class="projectAbout">
 
             <h1>Euler and Hamilton Graph Checker
             </h1>
-            <p>Kullanıcının girdiği graf yapısını analiz ederek Euler yolu, Euler çevrimi, Hamilton yolu ve Hamilton çevrimi kontrolü sağlar.Geliştirilen algoritmalarla grafın özellikleri hızlı ve doğru şekilde belirlenir.Kullanıcı dostu arayüz ile grafik girişi ve sonuçların kolay okunması sağlanır.Eğitim, araştırma ve mühendislik amaçlı kullanılabilecek pratik bir analiz aracıdır.
+            <p>Kullanıcının girdiği graf yapısını analiz ederek Euler yolu, Euler çevrimi, Hamilton yolu ve Hamilton
+                çevrimi kontrolü sağlar.Geliştirilen algoritmalarla grafın özellikleri hızlı ve doğru şekilde
+                belirlenir.Kullanıcı dostu arayüz ile grafik girişi ve sonuçların kolay okunması sağlanır.Eğitim,
+                araştırma ve mühendislik amaçlı kullanılabilecek pratik bir analiz aracıdır.
             </p>
         </div>
 
@@ -49,7 +57,7 @@
 
     <section class="project-gallery-alt">
 
- 
+
         <div class="project-row">
             <div class="project-image">
                 <img src="../image/Project/EulerHamiltonGraphChecker/euler_Hamilton.png" alt="Project Image 1">
@@ -60,7 +68,7 @@
             </div>
         </div>
 
-        <div class="project-row  reverse" >
+        <div class="project-row  reverse">
             <div class="project-image">
                 <img src="../image/Project/EulerHamiltonGraphChecker/Example_1.png" alt="Project Image 3">
             </div>
@@ -78,7 +86,8 @@
             </div>
             <div class="project-text">
                 <h3>Optimum Performans</h3>
-                <p> Basit yapısı sayesinde hızlı hesaplamalar gerçekleştirir, teorik bilgileri pratikte kullanmanıza olanak tanır.
+                <p> Basit yapısı sayesinde hızlı hesaplamalar gerçekleştirir, teorik bilgileri pratikte kullanmanıza
+                    olanak tanır.
 
 
                 </p>
@@ -97,16 +106,16 @@
             </div>
         </div>
 
-        
+
         </div>
 
-        
 
 
 
-        
 
-        
+
+
+
 
 
 
@@ -139,13 +148,19 @@
     <script src="../script.js"></script>
 
     <script>
-                window.addEventListener("scroll", function () {
+        window.addEventListener("scroll", function () {
             const navbar = document.querySelector("nav");
             if (window.scrollY > 50) {
                 navbar.classList.add("scrolled");
             } else {
                 navbar.classList.remove("scrolled");
             }
+        });
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
         });
 
     </script>

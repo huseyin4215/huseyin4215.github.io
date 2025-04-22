@@ -17,13 +17,19 @@
 
 
     <nav>
-        <ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
             <li class="DropBtn-homePage">Anasayfa</li>
             <li class="DropBtn-about">Hakkımda</li>
             <li class="DropBtn-project">Projelerim</li>
             <li class="DropBtn-contact">İletişim</li>
         </ul>
     </nav>
+    
 
     <section class="content">
 
@@ -98,28 +104,6 @@
                 </p>
             </div>
         </div>
-
-        <!-- <div class="project-row">
-            <div class="project-image">
-                <img src="../image/Project/Otel_Rezervation/HomePage_2.png" alt="Project Image 1">
-            </div>
-            <div class="project-image">
-                <img src="../image/Project/Otel_Rezervation/HomePage_3.png" alt="Project Image 1">
-            </div>
-        </div> -->
-
-
-        <!-- <div class="project-row">
-            <div class="project-image">
-                <img src="../image/Project/Otel_Rezervation/HomePage_5.png" alt="Project Image 1">
-            </div>
-            <div class="project-image">
-                <img src="../image/Project/Otel_Rezervation/HomePage_6.png" alt="Project Image 1">
-            </div>
-        </div> -->
-
-
-
 
         <div class="project-row">
             <div class="project-image">
@@ -209,6 +193,13 @@
             }
         });
 
+
+    const menuToggle = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-list');
+
+    menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('active');
+    });
     </script>
 </body>
 
