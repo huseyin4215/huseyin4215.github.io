@@ -12,7 +12,7 @@ a{
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(98, 97, 97);
+    background: linear-gradient(to right, rgba(249, 179, 179, 0.834), #aaaaaa);
     text-align: center;
     
 }
@@ -150,9 +150,78 @@ nav ul li:hover {
     height: 75px;
     padding: 2px;
 }
-section.active {
-    display: block;
+
+@media screen and (max-width: 1024px) {
+  .hakkimda {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .hakkimda .left h1{
+    margin-bottom: 10px;
+  }
+
+  .hakkimda .left,
+  .hakkimda .right {
+    width: 100%;
+  }
+
+  .hakkimda .left .profil {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hakkimda .right .info-job {
+    width: 50%;
+    margin-top: 20px;
+  }
+
+  .hakkimda .right .about-job,
+  .hakkimda .right .slogan {
+    font-size: 1.6rem;
+  }
+
+  .hakkimda .right .language-icons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .hakkimda .right .language-icons img {
+    height: 50px;
+  }
 }
+
+
+
+@media screen and (max-width: 480px) {
+  .hakkimda .left .profil {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hakkimda .left h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .hakkimda .right .about-job span,
+  .hakkimda .right .about-job {
+    font-size: 1.2rem;
+  }
+
+  .hakkimda .right .slogan {
+    font-size: 1.4rem;
+  }
+  .hakkimda .right .language-icons img {
+    height: 40px;
+  }
+}
+
+
+
+
+
 
 .projects{
     background: linear-gradient(to right, rgba(249, 179, 179, 0.834), #aaaaaa);
@@ -208,208 +277,529 @@ section.active {
     padding: 15px 5px;
 }
 
+@media screen and (max-width: 1024px) {
+  .projects .project-cards {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
 
-.about-us {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 20px;
-    background-color: black;
+  .projects .project-card-info {
+    width: 60%;
+    height: auto;
+    margin: 20px auto;
+    
+  }
+
+  .projects .project-card-info:hover {
+    width: 72%;
+  }
+
+  .projects .project-img {
+    height: auto;
+    max-height: 250px;
+  }
+
+  .projects .project-title {
+    font-size: 1.5rem;
+    padding: 10px 0;
+    text-align: center;
+  }
 }
 
+@media screen and (max-width: 600px) {
+  .projects .project-card-info {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .projects .project-img {
+    max-height: 200px;
+  }
+
+  .projects .project-title {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
+
+
+.about-us{
+    background: linear-gradient(to right, rgba(249, 179, 179, 0.834), #aaaaaa);
+    padding: 60px 0px;
+}
 .about-container {
     background-color: #fff;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 80%;
+    max-width: 1200px;
     margin: auto;
     text-align: left;
-}
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+  }
 
-.about-us h1 {
+  .MyResume {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .MyResume .MyCv {
+    background-color: #fcb9b9;
+    color: #3a3535;
+    font-weight: bold;
+    font-size: 1.8rem;
+    border-radius: 15px;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .MyResume .MyCv:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  .MyAbout {
+    border-bottom: 1px solid #ddd;
+  }
+  /* Hakkımda Bölümü */
+  .MyAbout h1 {
     color: #2c3e50;
     font-size: 28px;
     margin-bottom: 20px;
     border-bottom: 2px solid #3498db;
     display: inline-block;
     padding-bottom: 5px;
-}
-
-.about-us p {
+  }
+  
+  .MyAbout p {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.5;
     margin-bottom: 15px;
     text-align: justify;
-}
-
-.mySkills {
-   
-    padding: 0 5px;
-    
-    text-align: left;
-}
-
-.mySkill-item {
-  
-    color: rgb(0, 0, 0);
-    padding: 5px;
-    margin: 5px 0;
-    
-    font-size: 16px;
-  
-    transition: 0.3s;
-}
-
-
-
-.progress-bar-container {
-    position: relative;
-    width: 15%;
-    height: 8px;
-    background-color: #7c7c7c;
-    border-radius: 5px;
-
+    color: #333;
   }
   
 
+
+  .education, .experience {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
   
-  .dot {
-    position: absolute;
-    margin: auto ;
-    width: 15px;
-    height: 15px;
-    background-color: #000000;
-    border-radius: 50%;
-    top: -50%; 
-    
+  /* Başlık */
+  .edu-first h1, .exp-first h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    display: inline-block;
+    padding-top: 20px;
+    width: auto;
   }
 
-.focus{
-    padding: 20px 0px;
-}
-
-  .focus-Areas{
-   
-    padding: 0 5px;
+  .education-table ,.exp-table {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 20px;
-    text-align: left;
-}
-
-.focus-item {
+  }
   
-    color: rgb(0, 0, 0);
-    padding: 5px;
+  
+  .row-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+  }
+  
+  
+  .row-flex span:first-child {
+    text-align: left;
+    flex: 1;
+  }
+  
+  .row-flex span:last-child {
+    text-align: right;
+    flex: 1;
+  }
+  
+  /* İlgi Alanları */
+  .focus {
+    padding: 20px 0;
+  }
+  
+  .focus h1{
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .focus-Areas {
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+  }
+  
+  .focus-item {
+    background: #f0f0f0;
+    color: #333;
+    padding: 8px 12px;
     margin: 5px 0;
     border-radius: 5px;
     font-size: 16px;
-    transition: 0.3s;
-}
+    transition: background 0.3s ease;
+  }
+  
+  .focus-item:hover {
+    background: #e0e0e0;
+  }
+  
+  /* Yetenekler */
+  .skill {
+    padding: 20px 0;
+  }
+  .skill h1{
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .mySkills {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .mySkill-item {
+    background: #f0f0f0;
+    color: #333;
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  
+  .mySkill-item:hover {
+    background: #e0e0e0;
+  }
+  
+  
+  
+  .prog {
 
 
-.prog-lang{
+    border-radius: 12px;
+    margin: 20px 0px;
+   
+    
+  }
+  
+  .prog h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .programming-lang {
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
-    justify-content: space-between;
-    padding: 20px 0px;
-}
-
-.programmin-lang{
-    padding: 0 5px;
-    margin-top: 20px;
-    text-align: left;
-}
-
-.p-item{
-    color: rgb(0, 0, 0);
-    padding: 5px;
-    margin: 5px 0;
-    border-radius: 5px;
+    gap: 10px; /* itemlar arasında boşluk */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .p-item {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 8px 14px;
+    border-radius: 8px;
     font-size: 16px;
-    transition: 0.3s;
+    transition: background-color 0.3s ease;
+  }
+  
+  .p-item:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .lang {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 20px 0px;
+    
+  }
+  
+  .lang h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .lang p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #333;
+    font-weight: 500;
+  }
+  
+/* Sertifikalar */
+.certificas {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.cer h1{
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.document-item {
+  background: #f49e9e;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.document-item a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.document-item:hover {
+  background: #000000;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+
+
+  @media (max-width: 768px) {
+
+  .about-container {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .MyResume .MyCv {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+  }
+
+  .MyAbout h1,
+  .edu-first h1,
+  .exp-first h1,
+  .focus h1,
+  .skill h1,
+  .prog h1,
+  .lang h1,
+  .cer h1 {
+    font-size: 20px;
+  }
+
+  .MyAbout p,
+  .edu-left p,
+  .edu-right p,
+  .exp-left p,
+  .exp-right p,
+  .focus-item,
+  .mySkill-item,
+  .p-item,
+  .lang p,
+  .document-item {
+    font-size: 14px;
+  }
+
+  .edu-wrapper, .exp-wrapper {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .lang {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .programming-lang {
+    flex-direction: column;
+  }
+
+  .certificas {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .document-item {
+    text-align: center;
+  }
+
 }
 
 
 /* İletişim Bölümü */
 .contact-us {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 20px;
-    background-color: black;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, rgba(249, 179, 179, 0.834), #aaaaaa);
 }
 
 .contact-container {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 100%;
-    text-align: center;
-    margin: auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  margin: auto;
 }
 
 .contact-container h1 {
-    color: #2c3e50;
-    font-size: 28px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #3498db;
-    display: inline-block;
-    padding-bottom: 5px;
+  color: #2c3e50;
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #3498db;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+  width: 100%;
+  padding: 12px 0px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 .contact-form textarea {
-    resize: none;
-    height: 120px;
+  resize: none;
+  height: 120px;
 }
 
 .contact-form button {
-    background-color: #3498db;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.3s;
+  background-color: #3498db;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .contact-form button:hover {
-    background-color: #2980b9;
+  background-color: #2980b9;
 }
 
-
-.education , .experience{
-    display: flex;
-    
+/* 1024px ve altı (tablet) için */
+@media (max-width: 1024px) {
+.contact-us {
+  padding: 40px 15px;
 }
-.education .left ,.experience .left{
-    width: 40%;
 
+.contact-container {
+  padding: 35px;
+  max-width: 75%;
 }
-.education .right , .experience .right{
+
+.contact-container h1 {
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+
+.contact-form {
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-size: 15px;
+  padding: 10px 0px;
+ 
+}
+
+.contact-form button {
+  font-size: 15px;
+  padding: 10px;
   
-     width: 20%;
 }
+}
+
+/* 600px ve altı (mobil) için */
+@media (max-width: 600px) {
+.contact-us {
+  padding: 30px 10px;
+}
+
+.contact-container {
+  padding: 10px;
+  max-width: 80%;
+  box-shadow: none;
+  
+}
+
+.contact-container h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.contact-form {
+  gap: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-size: 14px;
+  padding: 5px 0px;
+}
+
+.contact-form button {
+  font-size: 15px;
+  padding: 8px;
+}
+}
+
 
 
 

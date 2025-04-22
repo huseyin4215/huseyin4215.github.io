@@ -21,6 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const project_4=document.getElementById("project_4");
 
 
+
+    const myCvButton=document.querySelector(".MyCv");
+
+
     // Sayfa yüklendikten sonra yapılacak işlemler
     const redirectAction = localStorage.getItem("redirect"); // Yönlendirme bilgisi alındı
 
@@ -118,6 +122,15 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 500); // 0.5 saniye bekle
         });
     }
+
+
+
+    myCvButton.addEventListener("click",function(){
+    window.open("pdf/CV.pdf", "_blank");
+
+    });
+
+
 });
 
 
