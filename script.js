@@ -71,38 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(section);
     });
 
-    document.querySelectorAll('nav ul li').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.classList.contains('btn-homepage') ? '.homepage' :
-                    link.classList.contains('btn-about') ? '.about-us' :
-                       link.classList.contains('btn-project') ? '.projects' :
-                       link.classList.contains('btn-contact') ? '.contact-us' : null;
-        
-        if (targetId) {
-            if (targetId === '.homepage') {
-                // Homepage yerine projects gösterilsin
-                const projectSection = document.querySelector('.projects');
-                if (projectSection) {
-                    // Burada scroll yerine görünürlüğü değiştirebilirsin
-                    projectSection.classList.add('active'); 
-                    // Eğer diğer section'lar kapanacaksa:
-                    document.querySelectorAll('section').forEach(sec => {
-                        if (sec !== projectSection) sec.classList.remove('active');
-                    });
-                }
-            } else {
-                const targetSection = document.querySelector(targetId);
-                if (targetSection) {
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            }
-        }
-    });
-});
 
 
    // Bölümler
@@ -138,30 +106,100 @@ const projects = [
 ];
 
 // Bölüm geçişini yöneten fonksiyon
-function showSection(section) {
+function showSection(section, instant = false) {
     aboutSection.style.display = "none";
     projectSection.style.display = "none";
     contactSection.style.display = "none";
 
     if (section === "homePage") {
-        projectSection.style.display = "block"; // homepage → projects
+        // Tüm section'ları göster ve en üste scroll yap
+        aboutSection.style.display = "block";
+        projectSection.style.display = "block";
+        contactSection.style.display = "block";
+        
+        // Opacity ve transform'u düzelt
+        aboutSection.style.opacity = "1";
+        aboutSection.style.transform = "translateY(0)";
+        projectSection.style.opacity = "1";
+        projectSection.style.transform = "translateY(0)";
+        contactSection.style.opacity = "1";
+        contactSection.style.transform = "translateY(0)";
+        
+        if (instant) {
+            // Direkt scroll - animasyonsuz
+            window.scrollTo({ top: 0, behavior: 'auto' });
+        } else {
+            // Yumuşak scroll
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     } else if (section === "about") {
         aboutSection.style.display = "block";
-        aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Opacity ve transform'u düzelt (IntersectionObserver için)
+        aboutSection.style.opacity = "1";
+        aboutSection.style.transform = "translateY(0)";
+        
+        if (instant) {
+            // Section render olduktan sonra direkt scroll - animasyonsuz
+            requestAnimationFrame(() => {
+                const offsetTop = aboutSection.offsetTop - 70; // Navbar yüksekliği
+                window.scrollTo({ top: Math.max(0, offsetTop), behavior: 'auto' });
+            });
+        } else {
+            aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     } else if (section === "project") {
         projectSection.style.display = "block";
-        projectSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Opacity ve transform'u düzelt (IntersectionObserver için)
+        projectSection.style.opacity = "1";
+        projectSection.style.transform = "translateY(0)";
+        
+        if (instant) {
+            // Section render olduktan sonra direkt scroll - animasyonsuz
+            requestAnimationFrame(() => {
+                const offsetTop = projectSection.offsetTop - 70; // Navbar yüksekliği
+                window.scrollTo({ top: Math.max(0, offsetTop), behavior: 'auto' });
+            });
+        } else {
+            projectSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     } else if (section === "contact") {
         contactSection.style.display = "block";
-        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Opacity ve transform'u düzelt (IntersectionObserver için)
+        contactSection.style.opacity = "1";
+        contactSection.style.transform = "translateY(0)";
+        
+        if (instant) {
+            // Section render olduktan sonra direkt scroll - animasyonsuz
+            requestAnimationFrame(() => {
+                const offsetTop = contactSection.offsetTop - 70; // Navbar yüksekliği
+                window.scrollTo({ top: Math.max(0, offsetTop), behavior: 'auto' });
+            });
+        } else {
+            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     }
 }
 
-// LocalStorage yönlendirme kontrolü
+// LocalStorage yönlendirme kontrolü - sayfa yüklendikten hemen sonra
+// DOMContentLoaded'dan önce kontrol et (daha hızlı)
 const redirectAction = localStorage.getItem("redirect");
 if (redirectAction) {
-    showSection(redirectAction);
     localStorage.removeItem("redirect");
+    
+    // Sayfa yüklendikten hemen sonra direkt scroll (animasyonsuz)
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+            // Çok kısa gecikme ile section'ların render olmasını bekle
+            setTimeout(() => {
+                showSection(redirectAction, true);
+            }, 10);
+        });
+    } else {
+        // Sayfa zaten yüklendi, direkt çalıştır
+        setTimeout(() => {
+            showSection(redirectAction, true);
+        }, 10);
+    }
 }
 
 // Navbar butonlarına event
