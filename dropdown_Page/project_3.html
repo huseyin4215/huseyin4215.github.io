@@ -17,7 +17,12 @@
 
 
     <nav>
-        <ul>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-list" id="nav-list">
             <li class="DropBtn-homePage">Anasayfa</li>
             <li class="DropBtn-about">Hakkımda</li>
             <li class="DropBtn-project">Projelerim</li>
@@ -186,50 +191,98 @@
         <small> 2025 ©- Hüseyin Sarıbuğa saribugahuseyin770[@]gmail.com
         </small>
     </section>
-    <script src="../script.js"></script>
-
     <script>
-        document.querySelector(".project-doc").addEventListener("click", function () {
-            window.open("https://www.beykentservisotolastik.com.tr", "_blank");
-        });
-        // Navbar'ı sayfa yüklendiğinde hemen ayarla
         document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector(".project-doc")?.addEventListener("click", function () {
+                window.open("https://www.beykentservisotolastik.com.tr", "_blank");
+            });
+
+            // Navbar'ı sayfa yüklendiğinde hemen ayarla
             const navbar = document.querySelector("nav");
             if (navbar) {
                 if (window.scrollY > 50) {
                     navbar.classList.add("scrolled");
                 }
             }
-        });
 
-        // Scroll event'i için optimized handler
-        let ticking = false;
-        window.addEventListener("scroll", function () {
-            if (!ticking) {
-                window.requestAnimationFrame(function() {
-                    const navbar = document.querySelector("nav");
-                    if (navbar) {
-                        if (window.scrollY > 50) {
-                            navbar.classList.add("scrolled");
-                        } else {
-                            navbar.classList.remove("scrolled");
+            // Scroll event'i için optimized handler
+            let ticking = false;
+            window.addEventListener("scroll", function () {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        const navbar = document.querySelector("nav");
+                        if (navbar) {
+                            if (window.scrollY > 50) {
+                                navbar.classList.add("scrolled");
+                            } else {
+                                navbar.classList.remove("scrolled");
+                            }
                         }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            // Mobile menu toggle - dropdown pages için
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const navList = document.querySelector('.nav-list');
+
+            if (menuToggle && navList) {
+                menuToggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isActive = !menuToggle.classList.contains('active');
+                    menuToggle.classList.toggle('active');
+                    navList.classList.toggle('active');
+                    
+                    // Prevent body scroll when menu is open
+                    if (isActive) {
+                        document.body.classList.add('menu-open');
+                    } else {
+                        document.body.classList.remove('menu-open');
                     }
-                    ticking = false;
                 });
-                ticking = true;
+
+                // Close menu when clicking on a nav item
+                document.querySelectorAll('nav ul li').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menuToggle.classList.remove('active');
+                        navList.classList.remove('active');
+                        document.body.classList.remove('menu-open');
+                    });
+                });
+
+            // Dropdown navigation links
+            const dropButtons = {
+                homePage: document.querySelector(".DropBtn-homePage"),
+                about: document.querySelector(".DropBtn-about"),
+                project: document.querySelector(".DropBtn-project"),
+                contact: document.querySelector(".DropBtn-contact")
+            };
+
+            // Dropdown butonlarına event
+            Object.keys(dropButtons).forEach(key => {
+                if (dropButtons[key]) {
+                    dropButtons[key].addEventListener("click", () => {
+                        localStorage.setItem("redirect", key);
+                        setTimeout(() => {
+                            window.location.href = "../index.html";
+                        }, 300);
+                    });
+                }
+            });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    const nav = document.querySelector('nav');
+                    if (nav && !nav.contains(e.target) && navList.classList.contains('active')) {
+                        menuToggle.classList.remove('active');
+                        navList.classList.remove('active');
+                        document.body.classList.remove('menu-open');
+                    }
+                });
             }
         });
-
-        const menuToggle = document.getElementById('mobile-menu');
-        const navList = document.querySelector('.nav-list');
-
-        if (menuToggle && navList) {
-            menuToggle.addEventListener('click', () => {
-                navList.classList.toggle('active');
-            });
-        }
-
     </script>
 </body>
 

@@ -2,6 +2,42 @@ document.addEventListener("DOMContentLoaded", function () {
     // Modern scroll animations and navigation
     const nav = document.querySelector('nav');
     const sections = document.querySelectorAll('section');
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const navList = document.getElementById('nav-list');
+    
+    // Mobile menu toggle
+    if (mobileMenuToggle && navList) {
+        mobileMenuToggle.addEventListener('click', () => {
+            const isActive = !mobileMenuToggle.classList.contains('active');
+            mobileMenuToggle.classList.toggle('active');
+            navList.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (isActive) {
+                document.body.classList.add('menu-open');
+            } else {
+                document.body.classList.remove('menu-open');
+            }
+        });
+
+        // Close menu when clicking on a nav item
+        document.querySelectorAll('nav ul li').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                navList.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && navList.classList.contains('active')) {
+                mobileMenuToggle.classList.remove('active');
+                navList.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+        });
+    }
     
     // Sticky navigation with scroll effect
     window.addEventListener('scroll', () => {
