@@ -27,12 +27,22 @@ body {
 /* Video Bölümü */
 .project-video {
     width: 100%;
-    height: 100vh;
-  
-    border-radius: 8px;
-    background-color: black;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 400px;
+    max-height: 80vh;
+    border-radius: 12px;
+    background-color: #000;
     border: none;
     display: block;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.project-video:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 /* Proje Hakkında */
@@ -273,6 +283,20 @@ body {
     .project-Feature .left, 
     .project-Feature .right {
         width: 100%;
+    }
+
+    .project-video {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+        min-height: 250px;
+        max-height: 50vh;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .project-video:hover {
+        transform: none;
     }
 }
 
