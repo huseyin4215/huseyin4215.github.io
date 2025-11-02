@@ -1,132 +1,32 @@
 /* Genel Stil */
+
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #121212;
-    color: #ffffff;
+    padding-top: 70px;
 }
-
-
-a{
-    text-decoration: none;
-}
-
-/* Navbar */
-nav {
-    background: #161616;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-}
-
-nav.scrolled {
-    background-color: #b6a8a896; /* Kaydırınca yarı saydam */
-}
-
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
-}
-
-nav ul li:hover {
-    color: #000000;
-}
-
-/* Hamburger Menü */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  z-index: 1100;
-}
-
-.menu-toggle .bar {
-  height: 3px;
-  width: 25px;
-  background-color: white;
-  margin: 4px 0;
-  transition: 0.3s;
-}
-
-/* Ana navbar */
-nav ul.nav-list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 0;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-      display: flex;
-  }
-
-  nav.scrolled {
-    height: 40px;
-    background-color: #161616; /* Kaydırınca yarı saydam */
-}
-  nav ul.nav-list {
-      flex-direction: column;
-      background-color: #161616;
-      position: absolute;
-      top: 40px;
-      right: 0;
-      width: 100%;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-  }
-
-  nav ul.nav-list.active {
-      max-height: 300px; /* Açılınca gösterilecek yükseklik */
-  }
-
-  nav ul.nav-list li {
-      text-align: center;
-      padding: 15px 0;
-      border-bottom: 1px solid #333;
-  }
-}
-
-
 
 /* İçerik Bölümü */
 .content {  
     width: 90%;
     max-width: 1200px;
-    margin: 80px auto 20px;
-    background: rgba(105, 105, 105, 0.1);
+    margin: 20px auto;
+    background: rgba(102, 126, 234, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 50px 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(105, 105, 105, 0.1);
+    border: 1px solid rgba(118, 75, 162, 0.2);
+    box-shadow: 0 4px 20px rgba(118, 75, 162, 0.3);
 }
 
 /* Video Bölümü */
 .project-video {
     width: 100%;
+    height: 100vh;
+    min-height: 250px;
     border-radius: 8px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    background-color: black;
+    border: none;
+    display: block;
 }
 
 /* Proje Hakkında */
@@ -137,9 +37,15 @@ nav ul.nav-list {
 }
 
 .projectAbout h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #b1b1b1;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #e8e3ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
 }
 
 .projectAbout p {
@@ -225,8 +131,11 @@ nav ul.nav-list {
     justify-content: space-between;
     gap: 30px;
     flex-wrap: wrap;
-
-    box-shadow: 0 4px 15px rgba(144, 144, 144, 0.1);
+    background: rgba(102, 126, 234, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(118, 75, 162, 0.15);
+    box-shadow: 0 4px 20px rgba(118, 75, 162, 0.35);
     padding: 20px;
     border-radius: 15px;
   }
@@ -272,46 +181,6 @@ nav ul.nav-list {
     padding: 20px;
   }
 
-footer{
-    
-    background-color: rgb(133, 122, 122);
-}
-
-footer .Social {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 10px 20px;
-    margin: 0;
-}
-
-footer .Social .icon {
-    border-radius: 50%;
-    border: 1px solid #000; /* Düzgün bir kenarlık için 2px */
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 10px; /* İkonlar arasında daha fazla boşluk */
-    transition: all 0.3s ease; 
-    color: rgb(133, 122, 122);
-    background-color: #000;
-    cursor: pointer;
-}
-
-footer .Social .icon:hover {
-    background-color: rgb(133, 122, 122); /* Hoverda arka plan siyah */
-    color: #fff;
-}
-
-
-
-
-
-footer .Social .icon  i {
-    font-size: 1.7rem; /* İkon boyutunu biraz küçültme */  
-}
 
 
 .maker-date{

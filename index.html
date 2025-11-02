@@ -1,357 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolyö</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  </head>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-</head>
-
-<body>
-
-
-
+  <body class="homepage_body">
     <section class="hakkimda">
-        <div class="left">
-            <img src="./image/profil4.jpg" alt="" class="profil">
-            <h1>Hüseyin Sarıbuğa</h1>
-        </div>
-        <div class="right">
-
-            <div class="info-job">
-                <div class="dot1"><i class="fa-solid fa-circle"></i></div>
-                <div class="info">Çalışmaya Açık</div>
-            </div>
-
-
-            <div class="about-job">Software Engineer <span>Web Developer</span></div>
-            <div class="slogan">Dijital dünya için yenilikçi çözümler</div>
-            <div class="language-icons">
-                <img src="./image/programmingLanguage/C.png" alt="">
-                <img src="./image/programmingLanguage/C++.png" alt="">
-                <img src="./image/programmingLanguage/Html.png" alt="">
-                <img src="./image/programmingLanguage/Css.png" alt="">
-                <img src="./image/programmingLanguage/JavaScript.png" alt="">
-                <img src="./image/programmingLanguage/java.png" alt="">
-                <img src="./image/programmingLanguage/MySql.png" alt="">
-
-
-
-            </div>
-
+      <div class="left">
+        <img src="./image/profil4.jpg" alt="" class="profil" />
+        <h1>Hüseyin Sarıbuğa</h1>
+      </div>
+      <div class="right">
+        <div class="info-job">
+          <div class="dot1">
+            <i class="fa-solid fa-circle"></i>
+          </div>
+          <div class="info">Çalışmaya Açık</div>
         </div>
 
-
-
-
+        <div class="about-job">
+          Software Engineer <span id="changing-title">Web Developer</span>
+        </div>
+        <div class="slogan">Dijital dünya için yenilikçi çözümler</div>
+        <div class="language-icons">
+          <div class="icon-row">
+            <img src="./image/programmingLanguage/Python.png" alt="Python" />
+            <img src="./image/programmingLanguage/Django.svg" alt="Django" />
+            <img src="./image/programmingLanguage/C.png" alt="C" />
+            <img src="./image/programmingLanguage/C++.png" alt="C++" />
+            <img src="./image/programmingLanguage/Html.png" alt="HTML" />
+            <img src="./image/programmingLanguage/Css.png" alt="CSS" />
+            <img src="./image/programmingLanguage/JavaScript.png" alt="JavaScript" />
+          </div>
+          <div class="icon-row">
+            <img src="./image/programmingLanguage/React.svg" alt="React" />
+            <img src="./image/programmingLanguage/ReactNative.svg" alt="React Native" />
+            <img src="./image/programmingLanguage/MySql.png" alt="MySQL" />
+            <img src="./image/programmingLanguage/Node.js.png" alt="Node.js" />
+          </div>
+        </div>
+      </div>
     </section>
 
     <nav>
-        <ul>
-            <li class="btn-about">Hakkımda</li>
-            <li class="btn-project">Projelerim</li>
-            <li class="btn-contact">İletişim</li>
-        </ul>
+      <ul>
+        <li class="btn-homepage">Anasayfa</li>
+        <li class="btn-about">Hakkımda</li>
+        <li class="btn-project">Projelerim</li>
+        <li class="btn-contact">İletişim</li>
+      </ul>
     </nav>
 
-
-
-
     <section class="projects">
-        <ul class="project-cards">
-            <li class="project-card-info" id="project_1">
+      <ul class="project-cards">
+        <li class="project-card-info" id="project_5">
+          <iframe src="https://player.vimeo.com/video/1132848798?autoplay=1&muted=1&loop=1&controls=0&background=1" class="project-img project-video-iframe" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          <div class="project-content">
+            <h1 class="project-title">Qnnect Akademik Randevu Sistemi</h1>
+            <p class="project-description">Akademik danışmanlık süreçlerini dijitalleştiren full-stack randevu yönetim sistemi. Rol bazlı erişim, QR kod, Google Takvim entegrasyonu ve geofence teknolojisi ile modern bir çözüm.</p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">MongoDB</span>
+            </div>
+          </div>
 
-                <video
-                    src="https://github.com/huseyin4215/huseyin4215.github.io/blob/daccd74f97384b634af9ee2a2593e3a78dd3dfa0/image/Project/Otel_Rezervation/tan%C4%B1t%C4%B1m.mp4?raw=true"
-                    type="video/mp4" class="project-img" autoplay muted loop>
-                </video>
+        </li>
+        <li class="project-card-info" id="project_6">
+          <iframe src="https://player.vimeo.com/video/1132848786?autoplay=1&muted=1&loop=1&controls=0&background=1" class="project-img project-video-iframe" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
-                <h1 class="project-title">Otel Rezervasyon Sistemi</h1>
+          <div class="project-content">
+            <h1 class="project-title">HealthArea Sağlık Yönetim Sistemi</h1>
+            <p class="project-description">Kişisel sağlık verilerini takip eden ve yöneten sistem. Günlük sağlık kayıtları, ilaç takibi, tıbbi randevu yönetimi ve sağlık istatistikleri ile kişisel sağlık yönetimini kolaylaştırır.</p>
+            <div class="project-tags">
+              <span class="project-tag">Health</span>
+              <span class="project-tag">Data Tracking</span>
+              <span class="project-tag">Web App</span>
+            </div>
+          </div>
 
+        </li>
 
+        <li class="project-card-info" id="project_1">
+          <iframe src="https://player.vimeo.com/video/1132846462?autoplay=1&muted=1&loop=1&controls=0&background=1" class="project-img project-video-iframe" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
+          <div class="project-content">
+            <h1 class="project-title">Otel Rezervasyon Sistemi</h1>
+            <p class="project-description">Geleneksel otel rezervasyon sistemlerini dijitalleştiren modern bir çözüm. Akıllı filtreleme, rezervasyon yönetimi ve dinamik fiyatlandırma ile müşteri deneyimini iyileştirir.</p>
+            <div class="project-tags">
+              <span class="project-tag">Web App</span>
+              <span class="project-tag">Reservation</span>
+              <span class="project-tag">Full-Stack</span>
+            </div>
+          </div>
 
-            </li>
-            <li class="project-card-info" id="project_2">
-                <video
-                    src="https://github.com/huseyin4215/huseyin4215.github.io/blob/daccd74f97384b634af9ee2a2593e3a78dd3dfa0/image/realtime.mp4?raw=true"
-                    type="video/mp4" class="project-img" autoplay muted loop>
-                </video>
+        </li>
+        <li class="project-card-info" id="project_2">
+          <iframe src="https://player.vimeo.com/video/1132846453?autoplay=1&muted=1&loop=1&controls=0&background=1" class="project-img project-video-iframe" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
-                <h1 class="project-title">Real Time Messaging and Call System</h1>
+          
+          <div class="project-content">
+            <h1 class="project-title">ChatWork</h1>
+            <p class="project-description">Gerçek zamanlı mesajlaşma ve sesli arama destekleyen iletişim uygulaması. WebSocket tabanlı altyapı ile bireysel ve grup sohbetleri, güvenli veri aktarımı ve modern UI.</p>
+            <div class="project-tags">
+              <span class="project-tag">Real-Time</span>
+              <span class="project-tag">WebRTC</span>
+              <span class="project-tag">Socket.io</span>
+            </div>
+          </div>
+        </li>
 
+        <li class="project-card-info" id="project_3">
+          <iframe src="https://player.vimeo.com/video/1132848786?autoplay=1&muted=1&loop=1&controls=0&background=1" class="project-img project-video-iframe" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
-            </li>
+          
+          <div class="project-content">
+            <h1 class="project-title">Beykent Oto</h1>
+            <p class="project-description">Kurumsal web sitesi. Firma bilgileri, ürün kataloğu, iletişim ve iş başvuru modülleri içeren çok sayfalı, mobil uyumlu ve modern tasarımlı kurumsal dijital kimlik.</p>
+            <div class="project-tags">
+              <span class="project-tag">Corporate</span>
+              <span class="project-tag">Web Design</span>
+              <span class="project-tag">UI/UX</span>
+            </div>
+          </div>
+        </li>
+        <li class="project-card-info" id="project_4">
+          <iframe src="https://player.vimeo.com/video/1132846446?autoplay=1&muted=1&loop=1&controls=0&background=1" class="project-img project-video-iframe" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          
+                    <div class="project-content">
+                      <h1 class="project-title">Euler and Hamilton Graph Checker</h1>
+            <p class="project-description">Graf teorisi algoritmalarını görselleştiren eğitim aracı. Euler ve Hamilton yolu analizi ile graf özelliklerini hızlı ve doğru şekilde belirleyen pratik bir analiz uygulaması.</p>
+            <div class="project-tags">
+              <span class="project-tag">Qt</span>
+              <span class="project-tag">Algorithm</span>
+              <span class="project-tag">Graph Theory</span>
+            </div>
+          </div>
+        </li>
+        <li class="project-card-info" id="project_7">
+          <iframe src="https://player.vimeo.com/video/1132848807?autoplay=1&muted=1&loop=1&controls=0&background=1" class="project-img project-video-iframe" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
-            <li class="project-card-info" id="project_3">
-                <video
-                    src="https://github.com/huseyin4215/huseyin4215.github.io/blob/daccd74f97384b634af9ee2a2593e3a78dd3dfa0/image/beykentOto.mp4?raw=true"
-                    type="video/mp4" class="project-img" autoplay muted loop>
-                </video>
+          <div class="project-content">
+            <h1 class="project-title">Özgür Elektrik</h1>
+            <p class="project-description">Kurumsal kimliğe uygun, mobil uyumlu hızlı bir elektrik hizmet sitesi.</p>
+            <div class="project-tags">
+              <span class="project-tag">Responsive design</span>
+              <span class="project-tag">SEO-optimized site</span>
+             
+            </div>
+          </div>
 
-                <h1 class="project-title">Beykent Oto</h1>
-
-            </li>
-            <li class="project-card-info" id="project_4">
-                <video
-                    src="https://github.com/huseyin4215/huseyin4215.github.io/blob/e15eabcd777bde2637798ddde744f0450a1ccd48/image/EulerHamilton.mp4?raw=true"
-                    type="video/mp4" class="project-img" autoplay muted loop>
-                </video>
-                <h1 class="project-title">Euler and Hamilton Graph Checker</h1>
-
-            </li>
-
-        </ul>
-
-
+        </li>
+      </ul>
     </section>
-
-
-
 
     <section class="about-us" style="display: none;">
-        <div class="about-container">
-
-            <div class="MyResume">
-                <button class="MyCv">
-                    CV Download
-                </button>
-            </div>
-
-            <div class="MyAbout">
-                <h1>Hakkımda</h1>
-                <p>
-                    Ben Hüseyin Sarıbuğa, üniversite eğitimime devam eden ve yazılım geliştirme, yapay zeka, gömülü
-                    sistemler gibi alanlara ilgi duyan bir araştırmacı ve geliştiriciyim. Akademik hayatım boyunca
-                    çeşitli
-                    projelerde yer alarak teknolojiye olan ilgimi somut çalışmalara dönüştürme fırsatı buldum.
-                    Okulda kismı zamanlı olarak ve işkur projeleriyle çalışma fırsatım ve deneyim elde etme şansım oldu.
-
-                </p>
-                <p>
-                    Özellikle <strong>web geliştirme, veri analizi ve donanım tabanlı projeler , UI/UX Tasarımı , Proje
-                        Yönetimi , Dökümantasyon</strong> üzerinde
-                    çalışmaktayım. TÜBİTAK 2209-A kapsamında takım arkadaşlarımla yürüttüğümüz proje <strong>öğrenciler
-                        için
-                        Ders içeriği ve not paylaşımını destekleyen açık kaynaklı mobil platform: LibNote'u
-                        geliştireceğiz.</strong>
-                </p>
-                <p>
-                    Teknolojiye olan ilgim doğrultusunda kendimi sürekli geliştirmekte, problem çözme yeteneğimi
-                    artıracak
-                    projeler üzerinde çalışmaktayım. <strong>Hackerrank </strong> gibi uygulamalarla algoritma analizi
-                    yeteneğimi geliştirmekteyim. Alanımla ilgili teorik bilgileri pratiğe dökerek, gerçek dünyadaki
-                    problemlere yenilikçi çözümler sunmayı amaçlamaktayım.
-                </p>
-                <p>
-                    Gelecekte edindiğim bilgi ve becerileri kullanarak sektörde değerli projelere katkı sağlamayı ve
-                    uzmanlık alanımı genişletmeyi hedefliyorum.
-                </p>
-            </div>
-
-            <!-- Eğitim Bölümü -->
-            <!-- Eğitim -->
-            <div class="education">
-
-                <div class="edu-wrapper">
-                    <div class="edu-first">
-                        <h1>Eğitim</h1>
-                    </div>
-                    <div class="edu-second">
-                        <table class="education-table">
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <div class="row-flex">
-                                    <span>Karapınar İbrahim Gündüz Anadolu Lisesi</span>
-                                    <span>2018 - 2021</span>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <div class="row-flex">
-                                    <span>Açık Öğretim Lisesi</span>
-                                    <span>2021 - 2022</span>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <div class="row-flex">
-                                    <span>Ankara Üniversitesi</span>
-                                    <span>2022 - Devam Ediyor</span>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                    </div>
-
-                      
-                      
-                </div>
-            </div>
-
-            <!-- Deneyim -->
-            <div class="experience">
-
-                <div class="exp-wrapper">
-                    <div class="exp-first">
-                        <h1>Deneyim</h1>
-                    </div>
-
-                    <div class="exp-second">
-                        <table class="exp-table">
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <div class="row-flex">
-                                    <span>Ankara Üniversitesi Kısmi Zamanlı</span>
-                                    <span>2022 - 2024</span>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <div class="row-flex">
-                                    <span>Ankara Üniversitesi İşkur Gençlik Programı</span>
-                                    <span>2025 - Devam Ediyor</span>
-                                  </div>
-                                </td>
-                              </tr>
-   
-                            </tbody>
-                          </table>
-                    </div>
-
-                </div>
-            </div>
-
-
-
-            <div class="focus">
-                <h1>İlgi Alanlarım</h1>
-                <ul class="focus-Areas">
-                    <li class="focus-item">Web Geliştirme – Kullanıcı arayüzü tasarımı ve modern web teknolojileriyle
-                        çalışma.</li>
-                    <li class="focus-item">Yapay Zeka ve Veri Analizi – Verileri işleyerek anlamlı sonuçlar çıkarma ve
-                        AI tabanlı projeler geliştirme.</li>
-                    <li class="focus-item">Gömülü Sistemler ve Donanım Entegrasyonu </li>
-                    <li class="focus-item">Problem Çözme ve Algoritma Geliştirme – Teknik problemleri analiz edip
-                        çözümler üretme.</li>
-                    <li class="focus-item">Proje Yönetimi ve Takım Çalışması – Akademik ve profesyonel projelerde ekip
-                        içinde çalışma deneyimi.</li>
-                    <li class="focus-item">Araştırma ve Geliştirme (AR-GE) – Yeni teknolojileri öğrenip uygulayarak
-                        yenilikçi projeler geliştirme.</li>
-                </ul>
-            </div>
-
-            <div class="skill">
-                <h1>Yeteneklerim</h1>
-                <ul class="mySkills">
-
-                    <li class="mySkill-item">Problem çözme ve analitik düşünme</li>
-                    <li class="mySkill-item">Takım çalışması </li>
-                    <li class="mySkill-item">Yeni teknolojilere hızlı adaptasyon</li>
-                    <li class="mySkill-item">Web geliştirme</li>
-                    <li class="mySkill-item">UI/UX Tasarımı</li>
-                    <li class="mySkill-item">Proje Yönetimi ve Gereksinim Analizi</li>
-
-
-
-
-                </ul>
-            </div>
-
-
-            <div class="prog">
-                <h1>Programlama Dilleri</h1>
-                <ul class="programming-lang">
-                    <li class="p-item">C</li>
-                    <li class="p-item">C++</li>
-                    <li class="p-item">Java</li>
-                    <li class="p-item">MySql</li>
-                    <li class="p-item">HTML</li>
-                    <li class="p-item">CSS</li>
-                    <li class="p-item">JavaScript</li>
-                    <li class="p-item">QT</li>
-                    <li class="p-item">Python</li>
-                    <li class="p-item">Labview</li>
-                </ul>
-            </div>
-
-            <div class="lang">
-                <h1>Yabancı Dil</h1>
-                <p>İngilizce</p>
-            </div>
-
-
-            <div class="cer">
-                <h1>Sertifikalarım</h1>
-                <ul class="certificas">
-                    <li class="document-item">
-                        <a href="https://www.dropbox.com/scl/fi/kuamk7j7m47fl5sj9rezd/C-_ile_Programlamaya_Giri-__Sertifika.pdf?rlkey=daxgw70m60cpgu20qjprs2802&st=iey7ksyi&dl=0"
-                            target="_blank">C++ ile Programlamaya Giriş</a>
-                    </li>
-                    <li class="document-item">
-                        <a href="https://www.dropbox.com/scl/fi/pt4cwq6b8zy7d8l8fcn5l/S-f-rdan_-leri_Seviye_Python_Programlama_Sertifika.pdf?rlkey=7elqxmvruow8s7r0xndr8wfpb&st=vuzem9to&dl=0"
-                            target="_blank">Sıfırdan İleri Seviye Python Programlama</a>
-                    </li>
-                    <li class="document-item">
-                        <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-e43511ba-52f6-4a7a-81a2-8b97ccd073d8.pdf"
-                            target="_blank">Sıfırdan İleri Düzey Web Geliştirme (HTML, CSS, Javascript)</a>
-                    </li>
-                    <li class="document-item">
-                        <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-14e8387d-bc10-4d5a-a3aa-fe4e816be0ff.pdf"
-                            target="_blank">C | Sıfırdan İleri Seviyeye Komple C Programlama</a>
-                    </li>
-                </ul>
-
-            </div>
-
-
+      <div class="about-container">
+        <div class="MyResume">
+          <button class="MyCv">CV Download</button>
         </div>
+
+        <div class="MyAbout">
+          <h1>Hakkımda</h1>
+          <p>Ankara Üniversitesi Yazılım Mühendisliği öğrencisiyim. Full-stack web ve mobil uygulama geliştirme alanlarında deneyim sahibiyim. Akademik ve kurumsal süreçleri dijitalleştiren ölçeklenebilir sistemler geliştirmeye odaklanıyor; kullanıcı deneyimini artıran, güvenilir ve sürdürülebilir yazılımlar üretmek için modern teknolojilerden yararlanıyorum.</p>
+          <p>
+            Soltudo Teknoloji A.Ş.'de Yazılım Geliştirme Stajyeri olarak Qnnect Akademik Randevu Sistemi'ni full-stack mimari ile geliştirdim. Bu süreçte rol bazlı erişim, QR kod entegrasyonu, Google Takvim senkronizasyonu, geofence tabanlı doğrulama gibi işlevleri uygulayarak gerçek bir ürün deneyimi edindim.
+          </p>
+          <p>
+            Projelerim arasında; makine öğrenmesi ile kişiselleştirilmiş öneriler sunan akademik içerik keşif platformu (LearnExp), kişisel sağlık verilerini takip eden sağlık yönetim sistemi (HealthArea), üniversite öğrencileri için sosyal öğrenme platformu (LibNote) ve gerçek zamanlı mesajlaşma ile sesli arama destekleyen iletişim uygulaması (ChatWork) gibi farklı problem alanlarına yönelik yapılar bulunmaktadır.
+          </p>
+          <p>Geliştirme süreçlerimde ölçeklenebilir mimari tasarımı, API geliştirme, veri modelleme, güvenli kimlik doğrulama, gerçek zamanlı haberleşme sistemleri, otomasyon, web kazıma ve entegrasyon teknolojileri üzerinde yoğunlaşıyorum. Üretim odaklı yaklaşımım sayesinde hem bireysel hem de ekip içinde etkin çalışabiliyor; iş birliğini, iletişimi ve sürekli öğrenmeyi ön planda tutuyorum.</p>
+        </div>
+
+        <!-- Eğitim Bölümü -->
+        <!-- Eğitim -->
+        <div class="education">
+          <div class="edu-wrapper">
+            <div class="edu-first">
+              <h1>Eğitim</h1>
+            </div>
+            <div class="edu-second">
+              <table class="education-table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="row-flex">
+                        <span>Karapınar İbrahim Gündüz Anadolu Lisesi</span>
+                        <span>2018 - 2021</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="row-flex">
+                        <span>Açık Öğretim Lisesi</span>
+                        <span>2021 - 2022</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="row-flex">
+                        <span>Ankara Üniversitesi</span>
+                        <span>2022 - Devam Ediyor</span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deneyim -->
+        <div class="experience">
+          <div class="exp-wrapper">
+            <div class="exp-first">
+              <h1>Deneyim</h1>
+            </div>
+
+            <div class="exp-second">
+              <table class="exp-table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="row-flex">
+                        <span><strong>Yazılım Geliştirme Stajyeri — Soltudo Teknoloji A.Ş.</strong></span>
+                        <span>07–09/2025</span>
+                      </div>
+                     
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="row-flex">
+                        <span><strong>İdari Destek Stajyeri — İŞKUR Projesi - Ankara Üniversitesi</strong></span>
+                        <span>Şubat–Ağustos 2025</span>
+                      </div>
+                    
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="row-flex">
+                        <span><strong>Kısmi Zamanlı Web ve İçerik Yönetimi Görevlisi — Ankara Üniversitesi</strong></span>
+                        <span>2022 - 2024</span>
+                      </div>
+                     
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="focus">
+          <h1>İlgi Alanlarım</h1>
+          <ul class="focus-Areas">
+            <li class="focus-item">Full-Stack Web & Mobil Uygulama Geliştirme</li>
+            <li class="focus-item">Dağıtık Sistemler ve Ölçeklenebilir Mimari</li>
+            <li class="focus-item">Akademik Bilgi Keşfi ve Öneri Sistemleri</li>
+            <li class="focus-item">Makine Öğrenmesi ve Veri Analitiği</li>
+            <li class="focus-item">Gerçek Zamanlı Haberleşme Sistemleri (WebRTC, Socket.io)</li>
+            <li class="focus-item">Doğal Dil İşleme (NLP) & Büyük Dil Modelleri (LLM)</li>
+            <li class="focus-item">API Tasarımı ve Entegrasyonlar</li>
+            <li class="focus-item">UI/UX Tasarımı ve Kullanıcı Odaklı Geliştirme</li>
+          </ul>
+        </div>
+
+        <div class="skill">
+          <h1>Yeteneklerim</h1>
+          <ul class="mySkills">
+            <li class="mySkill-item">Problem çözme ve analitik düşünme</li>
+            <li class="mySkill-item">Takım çalışması</li>
+            <li class="mySkill-item">Yeni teknolojilere hızlı adaptasyon</li>
+            <li class="mySkill-item">Web geliştirme</li>
+            <li class="mySkill-item">UI/UX Tasarımı</li>
+            <li class="mySkill-item">Proje Yönetimi ve Gereksinim Analizi</li>
+          </ul>
+        </div>
+
+        <div class="prog">
+          <h1>Programlama Dilleri</h1>
+          <ul class="programming-lang">
+            <li class="p-item">C</li>
+            <li class="p-item">C++</li>
+            <li class="p-item">Python</li>
+            <li class="p-item">Java</li>
+            <li class="p-item">JavaScript</li>
+            <li class="p-item">TypeScript</li>
+          </ul>
+        </div>
+
+        <div class="prog">
+          <h1>Frameworks & Technologies</h1>
+          <ul class="programming-lang">
+            <li class="p-item">React</li>
+            <li class="p-item">Vue.js</li>
+            <li class="p-item">React Native</li>
+            <li class="p-item">Node.js</li>
+            <li class="p-item">Express.js</li>
+            <li class="p-item">Django</li>
+            <li class="p-item">Qt</li>
+            <li class="p-item">HTML/CSS</li>
+            <li class="p-item">Tailwind CSS</li>
+            <li class="p-item">RESTful API</li>
+            <li class="p-item">JWT</li>
+            <li class="p-item">OAuth 2.0</li>
+            <li class="p-item">MySQL</li>
+            <li class="p-item">Docker</li>
+            <li class="p-item">Git</li>
+            <li class="p-item">Postman</li>
+          </ul>
+        </div>
+
+        <div class="lang">
+          <h1>Yabancı Dil</h1>
+          <p>İngilizce</p>
+        </div>
+        <!-- Sertifikalar 
+        <div class="cer">
+          <h1>Sertifikalarım</h1>
+          <ul class="certificas">
+            <li class="document-item">
+              <a href="https://www.dropbox.com/scl/fi/kuamk7j7m47fl5sj9rezd/C-_ile_Programlamaya_Giri-__Sertifika.pdf?rlkey=daxgw70m60cpgu20qjprs2802&st=iey7ksyi&dl=0" target="_blank">C++ ile Programlamaya Giriş</a>
+            </li>
+            <li class="document-item">
+              <a href="https://www.dropbox.com/scl/fi/pt4cwq6b8zy7d8l8fcn5l/S-f-rdan_-leri_Seviye_Python_Programlama_Sertifika.pdf?rlkey=7elqxmvruow8s7r0xndr8wfpb&st=vuzem9to&dl=0" target="_blank">Sıfırdan İleri Seviye Python Programlama</a>
+            </li>
+            <li class="document-item">
+              <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-e43511ba-52f6-4a7a-81a2-8b97ccd073d8.pdf" target="_blank">Sıfırdan İleri Düzey Web Geliştirme (HTML, CSS, Javascript)</a>
+            </li>
+            <li class="document-item">
+              <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-14e8387d-bc10-4d5a-a3aa-fe4e816be0ff.pdf" target="_blank">C | Sıfırdan İleri Seviyeye Komple C Programlama</a>
+            </li>
+          </ul>
+        </div>
+        -->
+      </div>
     </section>
 
-
     <section class="contact-us" style="display: none;">
-        <div class="contact-container">
-            <h1>İletişim</h1>
+      <div class="contact-container">
+        <h1>İletişim</h1>
 
-            <form class="contact-form"   action="https://formspree.io/f/mnndqzel"
-            method="POST">
-                <input type="text" name="name" placeholder="Adınız" required>
-                <input type="email" name="email" placeholder="E-Posta Adresiniz" required>
-                <textarea name="message" placeholder="Mesajınızı buraya yazın..." required></textarea>
-                <button type="submit">Gönder</button>
-            </form>
-        </div>
+        <form class="contact-form" action="https://formspree.io/f/mnndqzel" method="POST">
+          <input type="text" name="name" placeholder="Adınız" required />
+          <input type="email" name="email" placeholder="E-Posta Adresiniz" required />
+          <textarea name="message" placeholder="Mesajınızı buraya yazın..." required></textarea>
+          <button type="submit">Gönder</button>
+        </form>
+      </div>
     </section>
 
     <footer>
-        <div class="Social-icon">
-            <div class="Social">
-                <a class="icon" href="https://www.linkedin.com/in/huseyinsaribuga/" target="_blank"><i
-                        class="fa-brands fa-linkedin"></i></a></li>
-                <a class="icon" href="https://github.com/huseyin4215" target="_blank"><i
-                        class="fa-brands fa-github"></i></a></li>
-                <a class="icon" href="mailto:saribugahuseyin770@gmail.com" target="_blank"><i
-                        class="fa-solid fa-envelope"></i></a></li>
-
-            </div>
+      <div class="Social-icon">
+        <div class="Social">
+          <a class="icon" href="https://www.linkedin.com/in/huseyinsaribuga/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a class="icon" href="https://github.com/huseyin4215" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a class="icon" href="mailto:saribugahuseyin770@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
         </div>
+      </div>
     </footer>
     <section class="maker-date">
-        <small> 2025 ©- Hüseyin Sarıbuğa saribugahuseyin770[@]gmail.com
-        </small>
+      <small>2025 ©- Hüseyin Sarıbuğa saribugahuseyin770[@]gmail.com</small>
     </section>
     <script src="script.js"></script>
-</body>
-
-
+  </body>
 </html>
